@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="ClipOps: local authorized YouTube operations, privacy and terms.">
+<title>Privacy · ClipOps</title>
+<style>*{box-sizing:border-box}html{color-scheme:light}body{margin:0;background:#f5f7f5;color:#17251d;font:17px/1.65 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}header,main,footer{max-width:860px;margin:auto;padding:28px 24px}header{display:flex;gap:20px;justify-content:space-between;align-items:center;border-bottom:1px solid #dce4dd}header a{font-size:15px}nav{display:flex;gap:18px;flex-wrap:wrap}a{color:#176340;text-underline-offset:3px}a:focus-visible{outline:3px solid #176340;outline-offset:4px}.brand{color:inherit;font-weight:700;text-decoration:none}main{padding-top:46px;padding-bottom:52px}h1{font-size:clamp(30px,5vw,46px);line-height:1.15;letter-spacing:-.035em;margin:10px 0 20px}h2{font-size:23px;line-height:1.3;margin:34px 0 10px}p,ul{margin:12px 0}li+li{margin-top:8px}.eyebrow,.date{font-size:14px;color:#53665a}.lead{font-size:21px;line-height:1.5;max-width:700px}.card{border:1px solid #d5e1d8;background:#fff;border-radius:12px;padding:20px 24px;margin-top:28px}.card h2{margin-top:0}footer{font-size:14px;color:#53665a;border-top:1px solid #dce4dd;padding-bottom:40px}code{font-size:.9em;background:#e5eee7;padding:2px 5px;border-radius:4px}@media(max-width:600px){header{display:block}nav{margin-top:12px}main{padding-top:30px}.lead{font-size:19px}}</style>
+</head>
+<body>
+<header>
+<a class="brand" href="index.html">ClipOps</a>
+<nav aria-label="Main">
+<a href="index.html">Home</a>
+<a href="privacy.html">Privacy</a>
+<a href="terms.html">Terms</a>
+</nav>
+</header>
+<main>
+<p class="eyebrow">CLIPOPS</p>
+<h1>Privacy policy</h1>
+<p class="date">Effective 1 November 2026</p>
+<p>This policy describes the local ClipOps application maintained by androfficial. It also describes this static information site. The application is operated locally by the account owner or people the owner authorizes.</p>
+<h2>Data accessed and why</h2>
+<ul>
+<li>
+<strong>Google identity:</strong> verified email information is used to check that authorization belongs to the intended account. It is not used for marketing.</li>
+<li>
+<strong>YouTube channel and video data:</strong> channel IDs/handles, titles, descriptions, category/language, visibility, processing status and disclosure settings are read to verify the intended channel and approved publication.</li>
+<li>
+<strong>YouTube statistics and analytics:</strong> native video/channel performance data, including dates and available country-level reports, is used for the operator's channel analysis.</li>
+<li>
+<strong>OAuth credentials:</strong> access/refresh tokens, granted scopes and expiry information are retained to perform the authorized operations without repeatedly asking the operator to sign in.</li>
+<li>
+<strong>Operator-provided content:</strong> selected video files, descriptions, campaign references and approval records support private uploads, approved publication and public-link submission.</li>
+</ul>
+<p>Google OAuth does not provide the account password. An optional local account-import feature can retain credentials supplied directly by the operator in the encrypted local vault; they are not collected by this website or obtained from Google OAuth. Persistent browser sessions also remain in the operator's local browser profiles.</p>
+<h2>Storage and access</h2>
+<p>OAuth credentials and supported credential/session snapshots are encrypted locally using a macOS Keychain-protected key. Channel records, native analytics reports and the publication queue are local files protected by filesystem permissions; they are not individually encrypted by the application. The operator controls the computer, its backups and access by authorized helpers.</p>
+<p>The application has no central account-data database. This static website does not receive the application's tokens, metadata, analytics or media. It has no application login, forms, analytics script or advertising script. Its host, GitHub Pages, may process ordinary web-request information under the <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub Privacy Statement</a>.</p>
+<h2>Data transfers</h2>
+<p>The application sends authorized API requests, chosen uploads and approved metadata changes to Google/YouTube. When the operator requests a Content Rewards submission, it sends the selected public video URL and campaign/submission information to Content Rewards using that service's separate authenticated session. Content Rewards' own Google connection is distinct and governed by its <a href="https://contentrewards.com/privacy-policy">privacy policy</a>.</p>
+<p>Google user data is not sold, supplied to data brokers, used for advertising profiles or used to train generalized AI models. Human access is limited to the operator and authorized helpers, or access necessary for security, legal compliance or a specific support request with consent. The <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including its Limited Use requirements, governs the application's use and transfer of Google user data.</p>
+<h2>Retention, deletion and revocation</h2>
+<p>Local credentials, metadata and reports remain on the operator's computer until the operator removes them. The current application does not run an unattended cleanup service. Operators must keep retained API data current, periodically check continued authorization and remove data when consent ends, in accordance with the <a href="https://developers.google.com/youtube/terms/developer-policies">YouTube API Services Developer Policies</a>.</p>
+<p>You can revoke the application's Google access at any time in <a href="https://security.google.com/settings/security/permissions">Google account permissions</a>. Revocation prevents further authorized access, but does not automatically erase local copies. To remove local access and data: stop the worker and close the selected channel profile; revoke this application in Google account permissions; then remove the selected channel’s encrypted grant from <code>.local/secrets/youtube-oauth/</code>, its saved analytics in <code>.local/analytics/</code>, and its API-derived channel/publication records and queue entries. Review operator-controlled backups as well. Keep user-created source media only if you still have the right to retain it. Deleting these local copies does not delete videos or other data held by YouTube; manage those in YouTube itself.</p>
+<p>To request deletion assistance or ask about this policy, use the <a href="https://github.com/androfficial/androfficial.github.io/issues">support contact</a>. Do not post tokens, passwords, email addresses or private account data in a public issue. The OAuth consent screen also lists a support contact for private account matters.</p>
+<h2>Policy changes</h2>
+<p>This page will be updated when data practices change. New uses of Google user data require an updated disclosure and consent before that data is used for the new purpose. Google and YouTube also process data under the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>.</p>
+</main>
+<footer>Maintained by <a href="https://github.com/androfficial">androfficial</a>. <a href="https://github.com/androfficial/androfficial.github.io/issues">Support and privacy contact</a>.<br>Independent operator tool. No affiliation with or endorsement by Google, YouTube, Whop or Content Rewards.</footer>
+</body>
+</html>
